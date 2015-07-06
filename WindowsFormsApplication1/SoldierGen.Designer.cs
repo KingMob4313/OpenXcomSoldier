@@ -33,17 +33,17 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.Control = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.setArrivalTimeButton = new System.Windows.Forms.Button();
+            this.inTransitCheckBox = new System.Windows.Forms.CheckBox();
+            this.hoursArrivalLabel = new System.Windows.Forms.Label();
+            this.hoursArrivalTextBox = new System.Windows.Forms.TextBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.copyButton = new System.Windows.Forms.Button();
-            this.hoursArrivalLabel = new System.Windows.Forms.Label();
-            this.hoursArrivalTextBox = new System.Windows.Forms.TextBox();
-            this.inTransitCheckBox = new System.Windows.Forms.CheckBox();
-            this.setArrivalTimeButton = new System.Windows.Forms.Button();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             this.Control.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -107,6 +107,47 @@
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // setArrivalTimeButton
+            // 
+            this.setArrivalTimeButton.Enabled = false;
+            this.setArrivalTimeButton.Location = new System.Drawing.Point(198, 293);
+            this.setArrivalTimeButton.Name = "setArrivalTimeButton";
+            this.setArrivalTimeButton.Size = new System.Drawing.Size(75, 23);
+            this.setArrivalTimeButton.TabIndex = 9;
+            this.setArrivalTimeButton.Text = "Set Time";
+            this.setArrivalTimeButton.UseVisualStyleBackColor = true;
+            this.setArrivalTimeButton.Click += new System.EventHandler(this.setArrivalTimeButton_Click);
+            // 
+            // inTransitCheckBox
+            // 
+            this.inTransitCheckBox.AutoSize = true;
+            this.inTransitCheckBox.Location = new System.Drawing.Point(22, 272);
+            this.inTransitCheckBox.Name = "inTransitCheckBox";
+            this.inTransitCheckBox.Size = new System.Drawing.Size(70, 17);
+            this.inTransitCheckBox.TabIndex = 8;
+            this.inTransitCheckBox.Text = "In Transit";
+            this.inTransitCheckBox.UseVisualStyleBackColor = true;
+            this.inTransitCheckBox.CheckedChanged += new System.EventHandler(this.inTransitCheckBox_CheckedChanged);
+            // 
+            // hoursArrivalLabel
+            // 
+            this.hoursArrivalLabel.AutoSize = true;
+            this.hoursArrivalLabel.Location = new System.Drawing.Point(19, 298);
+            this.hoursArrivalLabel.Name = "hoursArrivalLabel";
+            this.hoursArrivalLabel.Size = new System.Drawing.Size(62, 13);
+            this.hoursArrivalLabel.TabIndex = 7;
+            this.hoursArrivalLabel.Text = "Arrival Time";
+            // 
+            // hoursArrivalTextBox
+            // 
+            this.hoursArrivalTextBox.Location = new System.Drawing.Point(92, 295);
+            this.hoursArrivalTextBox.MaxLength = 2;
+            this.hoursArrivalTextBox.Name = "hoursArrivalTextBox";
+            this.hoursArrivalTextBox.ReadOnly = true;
+            this.hoursArrivalTextBox.Size = new System.Drawing.Size(100, 20);
+            this.hoursArrivalTextBox.TabIndex = 6;
+            this.hoursArrivalTextBox.Text = "24";
+            // 
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
@@ -162,15 +203,6 @@
             this.tabPage2.UseVisualStyleBackColor = true;
             this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
             // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(6, 6);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox3.Size = new System.Drawing.Size(528, 283);
-            this.textBox3.TabIndex = 0;
-            // 
             // copyButton
             // 
             this.copyButton.Location = new System.Drawing.Point(406, 296);
@@ -179,47 +211,16 @@
             this.copyButton.TabIndex = 1;
             this.copyButton.Text = "Copy to Clipboard";
             this.copyButton.UseVisualStyleBackColor = true;
+            this.copyButton.Click += new System.EventHandler(this.copyButton_Click);
             // 
-            // hoursArrivalLabel
+            // textBox3
             // 
-            this.hoursArrivalLabel.AutoSize = true;
-            this.hoursArrivalLabel.Location = new System.Drawing.Point(19, 298);
-            this.hoursArrivalLabel.Name = "hoursArrivalLabel";
-            this.hoursArrivalLabel.Size = new System.Drawing.Size(62, 13);
-            this.hoursArrivalLabel.TabIndex = 7;
-            this.hoursArrivalLabel.Text = "Arrival Time";
-            // 
-            // hoursArrivalTextBox
-            // 
-            this.hoursArrivalTextBox.Location = new System.Drawing.Point(92, 295);
-            this.hoursArrivalTextBox.MaxLength = 2;
-            this.hoursArrivalTextBox.Name = "hoursArrivalTextBox";
-            this.hoursArrivalTextBox.ReadOnly = true;
-            this.hoursArrivalTextBox.Size = new System.Drawing.Size(100, 20);
-            this.hoursArrivalTextBox.TabIndex = 6;
-            this.hoursArrivalTextBox.Text = "24";
-            // 
-            // inTransitCheckBox
-            // 
-            this.inTransitCheckBox.AutoSize = true;
-            this.inTransitCheckBox.Location = new System.Drawing.Point(22, 272);
-            this.inTransitCheckBox.Name = "inTransitCheckBox";
-            this.inTransitCheckBox.Size = new System.Drawing.Size(70, 17);
-            this.inTransitCheckBox.TabIndex = 8;
-            this.inTransitCheckBox.Text = "In Transit";
-            this.inTransitCheckBox.UseVisualStyleBackColor = true;
-            this.inTransitCheckBox.CheckedChanged += new System.EventHandler(this.inTransitCheckBox_CheckedChanged);
-            // 
-            // setArrivalTimeButton
-            // 
-            this.setArrivalTimeButton.Enabled = false;
-            this.setArrivalTimeButton.Location = new System.Drawing.Point(198, 293);
-            this.setArrivalTimeButton.Name = "setArrivalTimeButton";
-            this.setArrivalTimeButton.Size = new System.Drawing.Size(75, 23);
-            this.setArrivalTimeButton.TabIndex = 9;
-            this.setArrivalTimeButton.Text = "Set Time";
-            this.setArrivalTimeButton.UseVisualStyleBackColor = true;
-            this.setArrivalTimeButton.Click += new System.EventHandler(this.setArrivalTimeButton_Click);
+            this.textBox3.Location = new System.Drawing.Point(6, 6);
+            this.textBox3.Multiline = true;
+            this.textBox3.Name = "textBox3";
+            this.textBox3.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBox3.Size = new System.Drawing.Size(528, 283);
+            this.textBox3.TabIndex = 0;
             // 
             // SoldierGen
             // 

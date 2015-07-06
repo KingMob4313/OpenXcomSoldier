@@ -40,13 +40,13 @@ namespace SoldierGen
             if (ofd.ShowDialog(this) == DialogResult.OK)
             {
                 _fileName = ofd.InitialDirectory + ofd.FileName;
-            }
-            textBox1.Text = _fileName.ToString();
-            //DataTable dt = new DataTable();
+                textBox1.Text = _fileName.ToString();
+                //DataTable dt = new DataTable();
 
-            var newSoldier = Processor.LoadXLS(_fileName, bundle, inTransitCheckBox.Checked, hoursArrivalTextBox.Text);
-            textBox2.Text = newSoldier.soldierCount.ToString();
-            textBox3.Text = newSoldier.soldierText.ToString();
+                var newSoldier = Processor.LoadXLS(_fileName, bundle, inTransitCheckBox.Checked, hoursArrivalTextBox.Text);
+                textBox2.Text = newSoldier.soldierCount.ToString();
+                textBox3.Text = newSoldier.soldierText.ToString();
+            }
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -69,6 +69,11 @@ namespace SoldierGen
 
         private void setArrivalTimeButton_Click(object sender, EventArgs e)
         {
+        }
+
+        private void copyButton_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetText(textBox3.Text);
         }
     }
 }
