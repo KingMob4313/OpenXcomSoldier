@@ -2,6 +2,8 @@ using LinqToExcel;
 using System;
 using System.Linq;
 using System.Text;
+using System.Windows.Forms;
+using System.Configuration;
 
 namespace SoldierGen
 {
@@ -82,13 +84,19 @@ namespace SoldierGen
                 statBlocks.Append("          look: " + item[15] + nextLine);
                 statBlocks.Append("          missions: 0" + nextLine);
                 statBlocks.Append("          kills: 0" + nextLine);
-                statBlocks.Append("          armor: STR_NONE_UC" + nextLine);
+                //statBlocks.Append("          armor: STR_NONE_UC" + nextLine);
+                statBlocks.Append("          armor: " + GetArmorName(Convert.ToInt32(item[16].Value)) + nextLine);
                 statBlocks.Append("          improvement: 0" + nextLine);
                 statBlocks.Append("          psiStrImprovement: 0" + nextLine);
             }
             currentBundle.soldierText = statBlocks.ToString();
 
             return currentBundle;
+        }
+
+        private string GetArmorName(int armorKey)
+        {
+            return ConfigurationManager.AppSettings[armorKey];
         }
 
         private SoldierBundle SetCurrentSoldiers(string strFile, SoldierBundle currentBundle, StringBuilder statBlocks, string nextLine)
@@ -137,7 +145,8 @@ namespace SoldierGen
                     statBlocks.Append("        look: " + item[15] + nextLine);
                     statBlocks.Append("        missions: 0" + nextLine);
                     statBlocks.Append("        kills: 0" + nextLine);
-                    statBlocks.Append("        armor: STR_NONE_UC" + nextLine);
+                    //statBlocks.Append("          armor: STR_NONE_UC" + nextLine);
+                    statBlocks.Append("          armor: " + GetArmorName(Convert.ToInt32(item[16].Value)) + nextLine);
                     statBlocks.Append("        improvement: 0" + nextLine);
                     statBlocks.Append("        psiStrImprovement: 0" + nextLine);
                 }
