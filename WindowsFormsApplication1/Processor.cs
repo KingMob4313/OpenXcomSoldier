@@ -52,42 +52,46 @@ namespace SoldierGen
                 _soldierGen.statusStrip1.Text = currentBundle.soldierCount.ToString();
                 currentBundle.soldierCount++;
                 statBlocks.Append("      - hours: " + arrivalTime + nextLine);
-                statBlocks.Append("        soldier:" + nextLine);
-                statBlocks.Append("          id: " + currentBundle.soldierCount.ToString() + nextLine);
-                statBlocks.Append("          name: " + item[0] + " " + item[1] + nextLine);
-                statBlocks.Append("          initialStats:" + nextLine);
-                statBlocks.Append("            tu: " + Convert.ToInt32(item[3].Value) + nextLine);
-                statBlocks.Append("            stamina: " + Convert.ToInt32(item[4].Value) + nextLine);
-                statBlocks.Append("            health: " + Convert.ToInt32(item[5].Value) + nextLine);
-                statBlocks.Append("            bravery: " + Convert.ToInt32(item[6].Value) + nextLine);
-                statBlocks.Append("            reactions: " + Convert.ToInt32(item[7].Value) + nextLine);
-                statBlocks.Append("            firing: " + Convert.ToInt32(item[8].Value) + nextLine);
-                statBlocks.Append("            throwing: " + Convert.ToInt32(item[9].Value) + nextLine);
-                statBlocks.Append("            strength: " + Convert.ToInt32(item[10].Value) + nextLine);
-                statBlocks.Append("            psiStrength: " + Convert.ToInt32(item[11].Value) + nextLine);
-                statBlocks.Append("            psiSkill: " + Convert.ToInt32(item[12].Value) + nextLine);
-                statBlocks.Append("            melee: " + Convert.ToInt32(item[13].Value) + nextLine);
-                statBlocks.Append("          currentStats:" + nextLine);
-                statBlocks.Append("            tu: " + Convert.ToInt32(item[3].Value) + nextLine);
-                statBlocks.Append("            stamina: " + Convert.ToInt32(item[4].Value) + nextLine);
-                statBlocks.Append("            health: " + Convert.ToInt32(item[5].Value) + nextLine);
-                statBlocks.Append("            bravery: " + Convert.ToInt32(item[6].Value) + nextLine);
-                statBlocks.Append("            reactions: " + Convert.ToInt32(item[7].Value) + nextLine);
-                statBlocks.Append("            firing: " + Convert.ToInt32(item[8].Value) + nextLine);
-                statBlocks.Append("            throwing: " + Convert.ToInt32(item[9].Value) + nextLine);
-                statBlocks.Append("            strength: " + Convert.ToInt32(item[10].Value) + nextLine);
-                statBlocks.Append("            psiStrength: " + Convert.ToInt32(item[11].Value) + nextLine);
-                statBlocks.Append("            psiSkill: " + Convert.ToInt32(item[12].Value) + nextLine);
-                statBlocks.Append("            melee: " + Convert.ToInt32(item[13].Value) + nextLine);
-                statBlocks.Append("          rank: 0" + nextLine);
-                statBlocks.Append("          gender: " + item[14] + nextLine);
-                statBlocks.Append("          look: " + item[15] + nextLine);
-                statBlocks.Append("          missions: 0" + nextLine);
-                statBlocks.Append("          kills: 0" + nextLine);
-                //statBlocks.Append("          armor: STR_NONE_UC" + nextLine);
-                statBlocks.Append("          armor: " + GetArmorName(Convert.ToInt32(item[16].Value)) + nextLine);
-                statBlocks.Append("          improvement: 0" + nextLine);
-                statBlocks.Append("          psiStrImprovement: 0" + nextLine);
+                statBlocks.Append("        type: STR_SOLDIER");
+                statBlocks.Append("        id: " + currentBundle.soldierCount.ToString() + nextLine);
+                statBlocks.Append("        name: " + item[0] + " " + item[1] + nextLine);
+                statBlocks.Append("        nationality: 0"); // + item[0] + " " + item[1] + nextLine);
+                statBlocks.Append("        initialStats:" + nextLine);
+                statBlocks.Append("          tu: " + Convert.ToInt32(item[3].Value) + nextLine);
+                statBlocks.Append("          stamina: " + Convert.ToInt32(item[4].Value) + nextLine);
+                statBlocks.Append("          health: " + Convert.ToInt32(item[5].Value) + nextLine);
+                statBlocks.Append("          bravery: " + Convert.ToInt32(item[6].Value) + nextLine);
+                statBlocks.Append("          reactions: " + Convert.ToInt32(item[7].Value) + nextLine);
+                statBlocks.Append("          firing: " + Convert.ToInt32(item[8].Value) + nextLine);
+                statBlocks.Append("          throwing: " + Convert.ToInt32(item[9].Value) + nextLine);
+                statBlocks.Append("          strength: " + Convert.ToInt32(item[10].Value) + nextLine);
+                statBlocks.Append("          psiStrength: " + Convert.ToInt32(item[11].Value) + nextLine);
+                statBlocks.Append("          psiSkill: " + Convert.ToInt32(item[12].Value) + nextLine);
+                statBlocks.Append("          melee: " + Convert.ToInt32(item[13].Value) + nextLine);
+                statBlocks.Append("        currentStats:" + nextLine);
+                statBlocks.Append("          tu: " + Convert.ToInt32(item[3].Value) + nextLine);
+                statBlocks.Append("          stamina: " + Convert.ToInt32(item[4].Value) + nextLine);
+                statBlocks.Append("          health: " + Convert.ToInt32(item[5].Value) + nextLine);
+                statBlocks.Append("          bravery: " + Convert.ToInt32(item[6].Value) + nextLine);
+                statBlocks.Append("          reactions: " + Convert.ToInt32(item[7].Value) + nextLine);
+                statBlocks.Append("          firing: " + Convert.ToInt32(item[8].Value) + nextLine);
+                statBlocks.Append("          throwing: " + Convert.ToInt32(item[9].Value) + nextLine);
+                statBlocks.Append("          strength: " + Convert.ToInt32(item[10].Value) + nextLine);
+                statBlocks.Append("          psiStrength: " + Convert.ToInt32(item[11].Value) + nextLine);
+                statBlocks.Append("          psiSkill: " + Convert.ToInt32(item[12].Value) + nextLine);
+                statBlocks.Append("          melee: " + Convert.ToInt32(item[13].Value) + nextLine);
+                statBlocks.Append("        rank: 0" + nextLine);
+                statBlocks.Append("        gender: " + item[14] + nextLine);
+                statBlocks.Append("        look: " + item[15] + nextLine);
+                //statBlocks.Append("        lookVariant: 0" + nextLine); //What is this??
+                statBlocks.Append("        missions: 0" + nextLine);
+                statBlocks.Append("        kills: 0" + nextLine);
+                statBlocks.Append("          armor: STR_NONE_UC" + nextLine);
+                //statBlocks.Append("          armor: " + GetArmorName(Convert.ToInt32(item[16].Value)) + nextLine);
+                statBlocks.Append("        improvement: 0" + nextLine);
+                statBlocks.Append("        psiStrImprovement: 0" + nextLine);
+                statBlocks.Append("        tags: ~" + nextLine);
+
             }
             currentBundle.soldierText = statBlocks.ToString();
 
@@ -114,8 +118,10 @@ namespace SoldierGen
                 {
                     _soldierGen.statusStrip1.Text = currentBundle.soldierCount.ToString();
                     currentBundle.soldierCount++;
-                    statBlocks.Append("      - id: " + currentBundle.soldierCount.ToString() + nextLine);
+                    statBlocks.Append("      - type: STR_SOLDIER");
+                    statBlocks.Append("        id: " + currentBundle.soldierCount.ToString() + nextLine);
                     statBlocks.Append("        name: " + item[0] + " " + item[1] + nextLine);
+                    statBlocks.Append("        nationality: 0"); // + item[0] + " " + item[1] + nextLine);
                     statBlocks.Append("        initialStats:" + nextLine);
                     statBlocks.Append("          tu: " + Convert.ToInt32(item[3].Value) + nextLine);
                     statBlocks.Append("          stamina: " + Convert.ToInt32(item[4].Value) + nextLine);
@@ -143,12 +149,14 @@ namespace SoldierGen
                     statBlocks.Append("        rank: 0" + nextLine);
                     statBlocks.Append("        gender: " + item[14] + nextLine);
                     statBlocks.Append("        look: " + item[15] + nextLine);
+                    //statBlocks.Append("        lookVariant: 0" + nextLine); //What is this??
                     statBlocks.Append("        missions: 0" + nextLine);
                     statBlocks.Append("        kills: 0" + nextLine);
-                    //statBlocks.Append("          armor: STR_NONE_UC" + nextLine);
-                    statBlocks.Append("          armor: " + GetArmorName(Convert.ToInt32(item[16].Value)) + nextLine);
+                    statBlocks.Append("          armor: STR_NONE_UC" + nextLine);
+                    //statBlocks.Append("          armor: " + GetArmorName(Convert.ToInt32(item[16].Value)) + nextLine);
                     statBlocks.Append("        improvement: 0" + nextLine);
                     statBlocks.Append("        psiStrImprovement: 0" + nextLine);
+                    statBlocks.Append("        tags: ~" + nextLine);
                 }
             }
             currentBundle.soldierText = statBlocks.ToString();
