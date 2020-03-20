@@ -86,7 +86,7 @@ namespace SoldierGen
                 //statBlocks.Append("        lookVariant: 0" + nextLine); //What is this??
                 statBlocks.Append("        missions: 0" + nextLine);
                 statBlocks.Append("        kills: 0" + nextLine);
-                statBlocks.Append("          armor: STR_NONE_UC" + nextLine);
+                statBlocks.Append("        armor: STR_NONE_UC" + nextLine);
                 //statBlocks.Append("          armor: " + GetArmorName(Convert.ToInt32(item[16].Value)) + nextLine);
                 statBlocks.Append("        improvement: 0" + nextLine);
                 statBlocks.Append("        psiStrImprovement: 0" + nextLine);
@@ -152,7 +152,7 @@ namespace SoldierGen
                     //statBlocks.Append("        lookVariant: 0" + nextLine); //What is this??
                     statBlocks.Append("        missions: 0" + nextLine);
                     statBlocks.Append("        kills: 0" + nextLine);
-                    statBlocks.Append("          armor: STR_NONE_UC" + nextLine);
+                    statBlocks.Append("        armor: STR_NONE_UC" + nextLine);
                     //statBlocks.Append("          armor: " + GetArmorName(Convert.ToInt32(item[16].Value)) + nextLine);
                     statBlocks.Append("        improvement: 0" + nextLine);
                     statBlocks.Append("        psiStrImprovement: 0" + nextLine);
