@@ -52,10 +52,10 @@ namespace SoldierGen
                 _soldierGen.statusStrip1.Text = currentBundle.soldierCount.ToString();
                 currentBundle.soldierCount++;
                 statBlocks.Append("      - hours: " + arrivalTime + nextLine);
-                statBlocks.Append("        type: STR_SOLDIER");
+                statBlocks.Append("        type: STR_SOLDIER" + nextLine);
                 statBlocks.Append("        id: " + currentBundle.soldierCount.ToString() + nextLine);
                 statBlocks.Append("        name: " + item[0] + " " + item[1] + nextLine);
-                statBlocks.Append("        nationality: 0"); // + item[0] + " " + item[1] + nextLine);
+                statBlocks.Append("        nationality: 0" + nextLine); // + item[0] + " " + item[1] + nextLine);
                 statBlocks.Append("        initialStats:" + nextLine);
                 statBlocks.Append("          tu: " + Convert.ToInt32(item[3].Value) + nextLine);
                 statBlocks.Append("          stamina: " + Convert.ToInt32(item[4].Value) + nextLine);
@@ -118,10 +118,10 @@ namespace SoldierGen
                 {
                     _soldierGen.statusStrip1.Text = currentBundle.soldierCount.ToString();
                     currentBundle.soldierCount++;
-                    statBlocks.Append("      - type: STR_SOLDIER");
+                    statBlocks.Append("      - type: STR_SOLDIER" + nextLine);
                     statBlocks.Append("        id: " + currentBundle.soldierCount.ToString() + nextLine);
                     statBlocks.Append("        name: " + item[0] + " " + item[1] + nextLine);
-                    statBlocks.Append("        nationality: 0"); // + item[0] + " " + item[1] + nextLine);
+                    statBlocks.Append("        nationality: 0" + nextLine); // + item[0] + " " + item[1] + nextLine);
                     statBlocks.Append("        initialStats:" + nextLine);
                     statBlocks.Append("          tu: " + Convert.ToInt32(item[3].Value) + nextLine);
                     statBlocks.Append("          stamina: " + Convert.ToInt32(item[4].Value) + nextLine);
